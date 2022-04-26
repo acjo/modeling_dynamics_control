@@ -1,0 +1,130 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3674,        120]
+NotebookOptionsPosition[      3194,        103]
+NotebookOutlinePosition[      3594,        119]
+CellTagsIndexPosition[      3551,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"identityZ", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "i"}], "*", 
+      RowBox[{"k", "^", "3"}], "*", "t"}], "]"}], "*", 
+    RowBox[{"Y", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"identityY", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{"i", "*", 
+      RowBox[{"k", "^", "3"}], "*", "t"}], "]"}], "*", 
+    RowBox[{"Z", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dZdt", " ", "=", " ", 
+   RowBox[{"D", "[", 
+    RowBox[{"identityZ", ",", " ", "t"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dYdt", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "i"}], "*", "k", "*", 
+     RowBox[{
+      RowBox[{"F", "[", 
+       RowBox[{
+        RowBox[{"G", "[", 
+         RowBox[{"Y", "[", "t", "]"}], "]"}], "^", "2"}], "]"}], "/", "2"}]}],
+     " ", "+", " ", 
+    RowBox[{"i", "*", 
+     RowBox[{"k", "^", "3"}], "*", 
+     RowBox[{"Y", "[", "t", "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dZdt", " ", "=", " ", 
+   RowBox[{"dZdt", " ", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Y", "'"}], "[", "t", "]"}], " ", "\[Rule]", " ", "dYdt"}], 
+     "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dZdt", " ", "=", " ", 
+   RowBox[{"dZdt", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Y", "[", "t", "]"}], " ", "\[Rule]", "identityY"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"dZdt", " ", "=", " ", 
+  RowBox[{"FullSimplify", "[", "dZdt", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8558779439801702`*^9, 3.8558782539474277`*^9}, {
+  3.855879961441306*^9, 
+  3.855879974891575*^9}},ExpressionUUID->"d7793dc5-9cbb-4321-9915-\
+7a4b90a84e1f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "2"]}], " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", "i"}], " ", 
+    SuperscriptBox["k", "3"], " ", "t"}]], " ", "i", " ", "k", " ", 
+  RowBox[{"F", "[", 
+   SuperscriptBox[
+    RowBox[{"G", "[", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"i", " ", 
+        SuperscriptBox["k", "3"], " ", "t"}]], " ", 
+      RowBox[{"Z", "[", "t", "]"}]}], "]"}], "2"], "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.855877981195093*^9, {3.85587802059739*^9, 3.8558780701613293`*^9}, {
+   3.855878173145165*^9, 3.855878199175555*^9}, {3.855878230003474*^9, 
+   3.855878254473043*^9}, 3.85587997017144*^9},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"c125c561-3591-4674-8eca-57e07e1fec28"]
+}, Open  ]]
+},
+WindowSize->{606., 634.875},
+WindowMargins->{{417, Automatic}, {60, Automatic}},
+FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4dd46b4b-558c-4976-aac3-8127601f4370"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1810, 55, 154, "Input",ExpressionUUID->"d7793dc5-9cbb-4321-9915-7a4b90a84e1f"],
+Cell[2393, 79, 785, 21, 47, "Output",ExpressionUUID->"c125c561-3591-4674-8eca-57e07e1fec28"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
